@@ -31,15 +31,36 @@
             font-family: 'Inter', sans-serif;
         }
         
-        .prose h1 { @apply text-3xl font-bold text-gray-900 dark:text-white mb-6; }
-        .prose h2 { @apply text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4; }
-        .prose h3 { @apply text-xl font-medium text-gray-900 dark:text-white mt-6 mb-3; }
-        .prose p { @apply text-gray-700 dark:text-gray-300 mb-4 leading-relaxed; }
-        .prose ul { @apply text-gray-700 dark:text-gray-300 mb-4 pl-6; }
-        .prose ol { @apply text-gray-700 dark:text-gray-300 mb-4 pl-6; }
+        .prose h1 { @apply text-3xl font-bold text-primary-contrast mb-6; }
+        .prose h2 { @apply text-2xl font-semibold text-primary-contrast mt-8 mb-4; }
+        .prose h3 { @apply text-xl font-medium text-primary-contrast mt-6 mb-3; }
+        .prose p { @apply text-secondary-contrast mb-4 leading-relaxed; }
+        .prose ul { @apply text-secondary-contrast mb-4 pl-6; }
+        .prose ol { @apply text-secondary-contrast mb-4 pl-6; }
         .prose li { @apply mb-2; }
         .prose a { @apply text-primary-600 dark:text-primary-400 hover:underline; }
         .prose hr { @apply border-gray-300 dark:border-gray-600 my-8; }
+        
+        /* Ensure text visibility in dark mode */
+        .dark {
+            color-scheme: dark;
+        }
+        
+        .text-primary-contrast {
+            color: #1f2937 !important;
+        }
+        
+        .dark .text-primary-contrast {
+            color: #f9fafb !important;
+        }
+        
+        .text-secondary-contrast {
+            color: #4b5563 !important;
+        }
+        
+        .dark .text-secondary-contrast {
+            color: #d1d5db !important;
+        }
     </style>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">

@@ -38,6 +38,35 @@
         .hover-scale:hover {
             transform: scale(1.02);
         }
+        
+        /* Ensure text visibility in dark mode */
+        .dark {
+            color-scheme: dark;
+        }
+        
+        .text-primary-contrast {
+            color: #1f2937 !important;
+        }
+        
+        .dark .text-primary-contrast {
+            color: #f9fafb !important;
+        }
+        
+        .text-secondary-contrast {
+            color: #4b5563 !important;
+        }
+        
+        .dark .text-secondary-contrast {
+            color: #d1d5db !important;
+        }
+        
+        .text-muted-contrast {
+            color: #6b7280 !important;
+        }
+        
+        .dark .text-muted-contrast {
+            color: #9ca3af !important;
+        }
     </style>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
@@ -104,8 +133,8 @@
             <!-- Page Header -->
             <div class="text-center mb-16">
                 <div class="text-6xl mb-6">📧</div>
-                <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">お問い合わせ</h1>
-                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                <h1 class="text-4xl font-bold text-primary-contrast mb-4">お問い合わせ</h1>
+                <p class="text-xl text-secondary-contrast max-w-2xl mx-auto">
                     ご意見・ご要望・不具合報告などがありましたら、<br>お気軽にご連絡ください。
                 </p>
             </div>
