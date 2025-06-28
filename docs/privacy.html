@@ -31,65 +31,61 @@
             font-family: 'Inter', sans-serif;
         }
         
-        .prose h1 { @apply text-3xl font-bold text-primary-contrast mb-6; }
-        .prose h2 { @apply text-2xl font-semibold text-primary-contrast mt-8 mb-4; }
-        .prose h3 { @apply text-xl font-medium text-primary-contrast mt-6 mb-3; }
-        .prose p { @apply text-secondary-contrast mb-4 leading-relaxed; }
-        .prose ul { @apply text-secondary-contrast mb-4 pl-6; }
-        .prose li { @apply mb-2; }
-        .prose a { @apply text-primary-600 dark:text-primary-400 hover:underline; }
-        .prose hr { @apply border-gray-300 dark:border-gray-600 my-8; }
-        
-        /* Ensure text visibility in dark mode */
-        .dark {
-            color-scheme: dark;
+        .prose h1 { 
+            @apply text-5xl font-bold text-gray-900 mb-12 pb-6 border-b-2 border-gray-300;
         }
-        
-        .text-primary-contrast {
-            color: #1f2937 !important;
+        .prose h2 { 
+            @apply text-3xl font-bold text-gray-900 mt-16 mb-8;
         }
-        
-        .dark .text-primary-contrast {
-            color: #f9fafb !important;
+        .prose h3 { 
+            @apply text-2xl font-semibold text-gray-800 mt-12 mb-6;
         }
-        
-        .text-secondary-contrast {
-            color: #4b5563 !important;
+        .prose h4 { 
+            @apply text-xl font-medium text-gray-700 mt-8 mb-4;
         }
-        
-        .dark .text-secondary-contrast {
-            color: #d1d5db !important;
+        .prose p { 
+            @apply text-base text-gray-700 mb-6 leading-relaxed;
+        }
+        .prose ul { 
+            @apply text-base text-gray-700 mb-8 pl-6 space-y-3;
+        }
+        .prose ol { 
+            @apply text-base text-gray-700 mb-8 pl-6 space-y-3;
+        }
+        .prose li { 
+            @apply leading-relaxed;
+        }
+        .prose a { 
+            @apply text-primary-600 hover:text-primary-700 hover:underline font-medium;
+        }
+        .prose hr { 
+            @apply border-gray-300 my-12;
+        }
+        .prose strong {
+            @apply text-gray-900 font-bold;
         }
     </style>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+<body class="bg-white">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center space-x-2">
                     <div class="text-2xl">💪</div>
-                    <a href="index.html" class="text-xl font-bold text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Muscle Memory</a>
+                    <a href="index.html" class="text-xl font-bold text-gray-900 hover:text-primary-600 transition-colors">Muscle Memory</a>
                 </div>
                 
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">ホーム</a>
-                    <a href="privacy.html" class="text-primary-600 dark:text-primary-400 font-medium">プライバシーポリシー</a>
-                    <a href="terms.html" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">利用規約</a>
-                    <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">お問い合わせ</a>
-                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-                        <svg id="theme-icon-light" class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
-                        </svg>
-                        <svg id="theme-icon-dark" class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                        </svg>
-                    </button>
+                    <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">ホーム</a>
+                    <a href="privacy.html" class="text-primary-600 font-medium">プライバシーポリシー</a>
+                    <a href="terms.html" class="text-gray-700 hover:text-primary-600 transition-colors">利用規約</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">お問い合わせ</a>
                 </div>
                 
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 transition-colors">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -99,62 +95,56 @@
         </div>
         
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
             <div class="px-4 py-2 space-y-1">
-                <a href="index.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">ホーム</a>
-                <a href="privacy.html" class="block px-3 py-2 text-primary-600 dark:text-primary-400 bg-gray-100 dark:bg-gray-800 rounded-lg font-medium">プライバシーポリシー</a>
-                <a href="terms.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">利用規約</a>
-                <a href="contact.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">お問い合わせ</a>
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">ホーム</a>
+                <a href="privacy.html" class="block px-3 py-2 text-primary-600 bg-gray-100 rounded-lg font-medium">プライバシーポリシー</a>
+                <a href="terms.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">利用規約</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">お問い合わせ</a>
             </div>
         </div>
     </nav>
 
     <!-- Breadcrumb -->
-    <div class="pt-24 pb-8 bg-white dark:bg-gray-900">
+    <div class="pt-24 pb-8 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <nav class="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
-                <a href="index.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">ホーム</a>
+            <nav class="flex items-center space-x-2 text-sm text-gray-500">
+                <a href="index.html" class="hover:text-primary-600 transition-colors">ホーム</a>
                 <span>›</span>
-                <span class="text-gray-900 dark:text-white">プライバシーポリシー</span>
+                <span class="text-gray-900">プライバシーポリシー</span>
             </nav>
         </div>
     </div>
 
     <!-- Main Content -->
-    <main class="bg-white dark:bg-gray-900 pb-20">
+    <main class="bg-white pb-20">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
             <div class="prose prose-lg max-w-none">
                 <h1>プライバシーポリシー</h1>
                 
-                <p>本アプリ（以下「当アプリ」といいます）は、ユーザーのプライバシーを尊重し、個人情報の保護に最大限努めます。以下に当アプリにおけるプライバシーの取り扱いについて記載します。</p>
-
-                <hr>
+                <p class="text-lg mb-8">本アプリ（以下「当アプリ」といいます）は、ユーザーのプライバシーを尊重し、個人情報の保護に最大限努めます。以下に当アプリにおけるプライバシーの取り扱いについて記載します。</p>
 
                 <h2>1. 収集する情報</h2>
 
                 <p>当アプリでは、以下の情報を収集する場合があります。</p>
 
                 <ul>
-                    <li>メールアドレス（ログイン時）</li>
-                    <li>利用状況に関する情報（Firebase Analytics 等）</li>
-                    <li>デバイス情報、OSバージョン、クラッシュ情報（Firebase Crashlytics）</li>
+                    <li>メールアドレス - ログイン時の認証に使用</li>
+                    <li>利用状況情報 - Firebase Analytics等による匿名データ</li>
+                    <li>デバイス情報 - OSバージョン、クラッシュ情報（Firebase Crashlytics）</li>
                 </ul>
 
-                <p><strong>※情報は匿名または統計的データとして取得され、個人を特定するものではありません。</strong></p>
-
-                <hr>
+                <p><strong>重要:</strong> 収集される情報は匿名または統計的データとして取得され、個人を特定するものではありません。</p>
 
                 <h2>2. 利用目的</h2>
 
                 <p>収集した情報は以下の目的で利用されます：</p>
 
                 <ul>
-                    <li>サービス品質の向上</li>
-                    <li>不具合対応およびアプリ改善</li>
-                    <li>利用状況の把握（アクセス解析）</li>
+                    <li>アプリの品質とユーザー体験の改善</li>
+                    <li>技術的問題の特定と修正</li>
+                    <li>アクセス解析と使用パターンの把握</li>
                 </ul>
-
-                <hr>
 
                 <h2>3. 情報の第三者提供</h2>
 
@@ -165,53 +155,42 @@
                     <li>法令に基づき開示が必要な場合</li>
                 </ul>
 
-                <hr>
-
                 <h2>4. 使用する外部サービス</h2>
 
-                <p>当アプリでは、以下の外部サービスを利用しています。<br>
-                これらのサービスは、それぞれのプライバシーポリシーに基づいて情報を取り扱っています。</p>
+                <p>当アプリでは、以下の外部サービスを利用しています。これらのサービスは、それぞれのプライバシーポリシーに基づいて情報を取り扱っています。</p>
 
                 <ul>
-                    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase</a></li>
-                    <li><a href="https://support.google.com/firebase/answer/6318039" target="_blank" rel="noopener noreferrer">Google Analytics for Firebase</a></li>
+                    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase</a> - Googleの開発プラットフォーム</li>
+                    <li><a href="https://support.google.com/firebase/answer/6318039" target="_blank" rel="noopener noreferrer">Google Analytics for Firebase</a> - アプリの利用状況分析ツール</li>
                 </ul>
-
-                <hr>
 
                 <h2>5. データの保存・管理</h2>
 
-                <p>収集された情報は、セキュリティに十分配慮した方法で保存・管理されます。</p>
-
-                <hr>
+                <p>収集された情報は、セキュリティに十分配慮した方法で保存・管理されます。最新の暗号化技術と安全な認証システムを使用しています。</p>
 
                 <h2>6. ユーザーによる設定</h2>
 
-                <ul>
-                    <li>ログイン情報は、ユーザーの意思によりいつでも削除可能です。</li>
-                    <li>利用者は、アプリのアンインストールによりデータ送信を停止できます。</li>
-                </ul>
+                <p>ユーザーの権利について：</p>
 
-                <hr>
+                <ul>
+                    <li><strong>データ削除:</strong> ログイン情報は、ユーザーの意思によりいつでも削除可能です</li>
+                    <li><strong>データ送信停止:</strong> アプリのアンインストールによりデータ送信を停止できます</li>
+                </ul>
 
                 <h2>7. プライバシーポリシーの変更</h2>
 
-                <p>本プライバシーポリシーは、必要に応じて予告なく変更されることがあります。<br>
-                変更後は、本ページに最新版を掲載します。</p>
-
-                <hr>
+                <p>本プライバシーポリシーは、必要に応じて予告なく変更されることがあります。変更後は、本ページに最新版を掲載します。</p>
 
                 <h2>8. お問い合わせ</h2>
 
                 <p>プライバシーに関するご質問・ご要望は、以下までご連絡ください：</p>
-
-                <p>📧 <a href="mailto:mkanno20008@gmail.com">mkanno20008@gmail.com</a></p>
+                <p><a href="mailto:mkanno20008@gmail.com">mkanno20008@gmail.com</a></p>
             </div>
 
             <!-- Navigation Links -->
-            <div class="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
+            <div class="mt-16 pt-8 border-t border-gray-200">
                 <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-                    <a href="index.html" class="inline-flex items-center px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 text-gray-600 hover:text-primary-600 transition-colors">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                         </svg>
@@ -221,7 +200,7 @@
                         <a href="terms.html" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors">
                             利用規約
                         </a>
-                        <a href="contact.html" class="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                        <a href="contact.html" class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
                             お問い合わせ
                         </a>
                     </div>
@@ -250,20 +229,6 @@
     </footer>
 
     <script>
-        // Dark mode toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        const html = document.documentElement;
-        
-        // Check for saved theme or default to light
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        html.classList.toggle('dark', savedTheme === 'dark');
-        
-        themeToggle.addEventListener('click', () => {
-            html.classList.toggle('dark');
-            const newTheme = html.classList.contains('dark') ? 'dark' : 'light';
-            localStorage.setItem('theme', newTheme);
-        });
-        
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');

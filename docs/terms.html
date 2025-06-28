@@ -31,66 +31,61 @@
             font-family: 'Inter', sans-serif;
         }
         
-        .prose h1 { @apply text-3xl font-bold text-primary-contrast mb-6; }
-        .prose h2 { @apply text-2xl font-semibold text-primary-contrast mt-8 mb-4; }
-        .prose h3 { @apply text-xl font-medium text-primary-contrast mt-6 mb-3; }
-        .prose p { @apply text-secondary-contrast mb-4 leading-relaxed; }
-        .prose ul { @apply text-secondary-contrast mb-4 pl-6; }
-        .prose ol { @apply text-secondary-contrast mb-4 pl-6; }
-        .prose li { @apply mb-2; }
-        .prose a { @apply text-primary-600 dark:text-primary-400 hover:underline; }
-        .prose hr { @apply border-gray-300 dark:border-gray-600 my-8; }
-        
-        /* Ensure text visibility in dark mode */
-        .dark {
-            color-scheme: dark;
+        .prose h1 { 
+            @apply text-5xl font-bold text-gray-900 mb-12 pb-6 border-b-2 border-gray-300;
         }
-        
-        .text-primary-contrast {
-            color: #1f2937 !important;
+        .prose h2 { 
+            @apply text-3xl font-bold text-gray-900 mt-16 mb-8;
         }
-        
-        .dark .text-primary-contrast {
-            color: #f9fafb !important;
+        .prose h3 { 
+            @apply text-2xl font-semibold text-gray-800 mt-12 mb-6;
         }
-        
-        .text-secondary-contrast {
-            color: #4b5563 !important;
+        .prose h4 { 
+            @apply text-xl font-medium text-gray-700 mt-8 mb-4;
         }
-        
-        .dark .text-secondary-contrast {
-            color: #d1d5db !important;
+        .prose p { 
+            @apply text-base text-gray-700 mb-6 leading-relaxed;
+        }
+        .prose ul { 
+            @apply text-base text-gray-700 mb-8 pl-6 space-y-3;
+        }
+        .prose ol { 
+            @apply text-base text-gray-700 mb-8 pl-6 space-y-3;
+        }
+        .prose li { 
+            @apply leading-relaxed;
+        }
+        .prose a { 
+            @apply text-primary-600 hover:text-primary-700 hover:underline font-medium;
+        }
+        .prose hr { 
+            @apply border-gray-300 my-12;
+        }
+        .prose strong {
+            @apply text-gray-900 font-bold;
         }
     </style>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+<body class="bg-white">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center space-x-2">
                     <div class="text-2xl">💪</div>
-                    <a href="index.html" class="text-xl font-bold text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Muscle Memory</a>
+                    <a href="index.html" class="text-xl font-bold text-gray-900 hover:text-primary-600 transition-colors">Muscle Memory</a>
                 </div>
                 
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">ホーム</a>
-                    <a href="privacy.html" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">プライバシーポリシー</a>
-                    <a href="terms.html" class="text-primary-600 dark:text-primary-400 font-medium">利用規約</a>
-                    <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">お問い合わせ</a>
-                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-                        <svg id="theme-icon-light" class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
-                        </svg>
-                        <svg id="theme-icon-dark" class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                        </svg>
-                    </button>
+                    <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">ホーム</a>
+                    <a href="privacy.html" class="text-gray-700 hover:text-primary-600 transition-colors">プライバシーポリシー</a>
+                    <a href="terms.html" class="text-primary-600 font-medium">利用規約</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">お問い合わせ</a>
                 </div>
                 
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 transition-colors">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -100,53 +95,44 @@
         </div>
         
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
             <div class="px-4 py-2 space-y-1">
-                <a href="index.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">ホーム</a>
-                <a href="privacy.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">プライバシーポリシー</a>
-                <a href="terms.html" class="block px-3 py-2 text-primary-600 dark:text-primary-400 bg-gray-100 dark:bg-gray-800 rounded-lg font-medium">利用規約</a>
-                <a href="contact.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">お問い合わせ</a>
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">ホーム</a>
+                <a href="privacy.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">プライバシーポリシー</a>
+                <a href="terms.html" class="block px-3 py-2 text-primary-600 bg-gray-100 rounded-lg font-medium">利用規約</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">お問い合わせ</a>
             </div>
         </div>
     </nav>
 
     <!-- Breadcrumb -->
-    <div class="pt-24 pb-8 bg-white dark:bg-gray-900">
+    <div class="pt-24 pb-8 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <nav class="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
-                <a href="index.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">ホーム</a>
+            <nav class="flex items-center space-x-2 text-sm text-gray-500">
+                <a href="index.html" class="hover:text-primary-600 transition-colors">ホーム</a>
                 <span>›</span>
-                <span class="text-gray-900 dark:text-white">利用規約</span>
+                <span class="text-gray-900">利用規約</span>
             </nav>
         </div>
     </div>
 
     <!-- Main Content -->
-    <main class="bg-white dark:bg-gray-900 pb-20">
+    <main class="bg-white pb-20">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
             <div class="prose prose-lg max-w-none">
                 <h1>利用規約</h1>
                 
-                <p>この利用規約（以下「本規約」といいます。）は、本アプリ（以下「本アプリ」といいます。）の利用条件を定めるものです。本アプリを利用される場合は、本規約に同意されたものとみなします。</p>
+                <p class="text-lg mb-8">この利用規約（以下「本規約」といいます。）は、本アプリ（以下「本アプリ」といいます。）の利用条件を定めるものです。本アプリを利用される場合は、本規約に同意されたものとみなします。</p>
 
-                <hr>
-
-                <h2>第1条（適用）</h2>
+                <h2>第1条　適用</h2>
 
                 <p>本規約は、ユーザーと開発者との間の本アプリの利用に関する一切の関係に適用されます。</p>
 
-                <hr>
+                <h2>第2条　利用登録</h2>
 
-                <h2>第2条（利用登録）</h2>
+                <p>本アプリは、ユーザーによる登録なしにご利用いただけますが、一部機能はログインが必要です。登録にあたっては、正確かつ最新の情報を入力してください。</p>
 
-                <ul>
-                    <li>本アプリは、ユーザーによる登録なしにご利用いただけますが、一部機能はログインが必要です。</li>
-                    <li>登録にあたっては、正確かつ最新の情報を入力してください。</li>
-                </ul>
-
-                <hr>
-
-                <h2>第3条（禁止事項）</h2>
+                <h2>第3条　禁止事項</h2>
 
                 <p>ユーザーは、以下の行為をしてはなりません。</p>
 
@@ -158,24 +144,15 @@
                     <li>その他、開発者が不適切と判断する行為</li>
                 </ol>
 
-                <hr>
-
-                <h2>第4条（著作権）</h2>
+                <h2>第4条　著作権</h2>
 
                 <p>本アプリおよび掲載コンテンツに関する著作権・商標権その他の知的財産権は、開発者または正当な権利者に帰属します。</p>
 
-                <hr>
+                <h2>第5条　免責事項</h2>
 
-                <h2>第5条（免責事項）</h2>
+                <p>本アプリは、可能な限り正確な情報を提供するよう努めますが、その正確性・安全性・有用性等について保証するものではありません。本アプリの利用により発生した損害について、開発者は一切責任を負いません。</p>
 
-                <ul>
-                    <li>本アプリは、可能な限り正確な情報を提供するよう努めますが、その正確性・安全性・有用性等について保証するものではありません。</li>
-                    <li>本アプリの利用により発生した損害について、開発者は一切責任を負いません。</li>
-                </ul>
-
-                <hr>
-
-                <h2>第6条（サービスの停止・変更）</h2>
+                <h2>第6条　サービスの停止・変更</h2>
 
                 <p>開発者は、以下の事由がある場合、ユーザーへの事前通知なく本アプリの全部または一部の提供を中断または終了することがあります。</p>
 
@@ -185,37 +162,28 @@
                     <li>その他やむを得ない事由</li>
                 </ul>
 
-                <hr>
-
-                <h2>第7条（プライバシー）</h2>
+                <h2>第7条　プライバシー</h2>
 
                 <p>本アプリでは、Firebase Analyticsなどを用いて利用状況を匿名で収集する場合があります。詳細は<a href="privacy.html">プライバシーポリシー</a>をご参照ください。</p>
 
-                <hr>
-
-                <h2>第8条（規約の変更）</h2>
+                <h2>第8条　規約の変更</h2>
 
                 <p>本規約の内容は、必要に応じて変更することがあります。変更後の利用規約は、本ページに掲載された時点から効力を生じます。</p>
 
-                <hr>
-
-                <h2>第9条（準拠法・裁判管轄）</h2>
+                <h2>第9条　準拠法・裁判管轄</h2>
 
                 <p>本規約は日本法に準拠し、ユーザーと開発者との間で本アプリに関する紛争が生じた場合、開発者の所在地を管轄する裁判所を専属的合意管轄とします。</p>
-
-                <hr>
 
                 <h2>お問い合わせ</h2>
 
                 <p>本規約に関するご質問は、以下のメールアドレスまでお問い合わせください。</p>
-
-                <p>📧 <a href="mailto:mkanno20008@gmail.com">mkanno20008@gmail.com</a></p>
+                <p><a href="mailto:mkanno20008@gmail.com">mkanno20008@gmail.com</a></p>
             </div>
 
             <!-- Navigation Links -->
-            <div class="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
+            <div class="mt-16 pt-8 border-t border-gray-200">
                 <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-                    <a href="index.html" class="inline-flex items-center px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 text-gray-600 hover:text-primary-600 transition-colors">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                         </svg>
@@ -225,7 +193,7 @@
                         <a href="privacy.html" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors">
                             プライバシーポリシー
                         </a>
-                        <a href="contact.html" class="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                        <a href="contact.html" class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
                             お問い合わせ
                         </a>
                     </div>
@@ -254,20 +222,6 @@
     </footer>
 
     <script>
-        // Dark mode toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        const html = document.documentElement;
-        
-        // Check for saved theme or default to light
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        html.classList.toggle('dark', savedTheme === 'dark');
-        
-        themeToggle.addEventListener('click', () => {
-            html.classList.toggle('dark');
-            const newTheme = html.classList.contains('dark') ? 'dark' : 'light';
-            localStorage.setItem('theme', newTheme);
-        });
-        
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
